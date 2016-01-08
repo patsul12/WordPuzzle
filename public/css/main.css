@@ -1,0 +1,27 @@
+.jumbotron {
+  text-align: center;
+}
+
+.col-center {
+  float: none;
+  margin: 0 auto;
+}
+
+.puzzle {
+  font-size: 3em;
+  font-family: monospace;
+  background-color: #999;
+  padding:10px;
+  margin: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #888;
+}
+
+form {
+  padding: 10px;
+}
+
+form, form input, form label, form button {
+  margin: auto;
+  text-align: center;
+}

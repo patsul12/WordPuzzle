@@ -1,6 +1,12 @@
 <%= erb :header %>
-<form action="/puzzle">
-  <label>Enter the answer here:</label>
-  <input name="input">
-  <button type="submit">Submit</button>
-</form>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-xs-12 col-md-8 col-lg-6 col-center">
+      <form action="/puzzle">
+        <label class="form-control">Enter a string to create a puzzle:</label>
+        <input class="form-control" name="input">
+        <button class="btn btn-block btn-primary" type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
