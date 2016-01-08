@@ -15,6 +15,32 @@
   margin: 5px;
   border-radius: 10px;
   box-shadow: 5px 5px 10px #888;
+  text-align: center;
+}
+
+.result {
+  text-align: center;
+  padding: 15px;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 3em;
+  font-family: monospace;
+  box-shadow: 5px 5px 10px #888;
+  border-radius: 10px;
+}
+
+.winner {
+  background-color: rgba(0,200,0,0.8);
+}
+
+.loser {
+  background-color: rgba(200,0,0,0.8);
+  color: white;
+}
+
+.return {
+  margin-top: 20px;
+  margin: auto;
 }
 
 form {

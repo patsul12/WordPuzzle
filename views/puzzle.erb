@@ -2,11 +2,18 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-xs-12 col-md-8 col-lg-6 col-center">
+      <div hidden class="answer"><%= @answer %></div>
       <div class="puzzle"><%= @puzzle %></div>
-      <form action="/puzzle">
-        <input class="form-control" name="user_guess">
-        <button class="btn  btn-block btn-danger" type="submit">Submit</submit>
+      <form id="guess">
+        <input class="form-control" id="user_guess" name="user_guess">
+        <button class="btn btn-block btn-danger" type="submit">Submit</button>
       </form>
+    </div>
+  </div>
+  <div class="row">
+    <div hidden class="col-xs-12 col-md-8 col-lg-6 col-center result"></div>
+    <div class="col-xs-12 col-md-8 col-lg-6 col-center return">
+      <a href="/"><button class="btn btn-primary btn-block">Try a new puzzle</button></a>
     </div>
   </div>
 </div>

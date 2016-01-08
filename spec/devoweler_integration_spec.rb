@@ -1,6 +1,13 @@
 require('capybara/rspec')
 require('./app')
 Capybara.app = Sinatra::Application
+
+#setup capybara to allow for testing along with the javascript code
+Capybara.register_driver :chrome do |app|
+  Capybara::Selenium::Driver.new(app, :browser => :chrome)
+end
+Capybara.javascript_driver = :chrome
+Capybara.current_driver = Capybara.javascript_driver
 set(:show_exceptions, false)
 
 describe('the devoweler path') do

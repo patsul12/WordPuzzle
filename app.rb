@@ -11,6 +11,7 @@ end
 
 get('/puzzle') do
   @page_header = "Can you solve puzzle?"
-  @puzzle = params.fetch('input').devoweler
+  @answer = params.fetch('input')
+  @puzzle = @answer.devoweler
   erb(:puzzle)
 end
