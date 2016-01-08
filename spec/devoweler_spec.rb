@@ -34,4 +34,8 @@ describe("String#devoweler") do
     expect("interesting".devoweler).to(eq("-nt-r-st-ng"))
     expect("underrated".devoweler).to(eq("-nd-rr-t-d"))
   end
+
+  it("handles multiple word strings properly") do
+    expect("ruby is an underrated language, which isn't very hard to learn".devoweler).to(eq("r-by -s -n -nd-rr-t-d l-ng--g-, wh-ch -sn't v-ry h-rd t- l--rn"))
+  end
 end
