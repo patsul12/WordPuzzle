@@ -6,6 +6,10 @@ This site takes in a word or string and replaces the vowels with `-` characters
 It then uses this "devoweled" string to create a new page on which the user tries to guess the correct word/string.
 
 ##Usage:
-To install locally just clone the repo into the directory of your choosing and the run
+To install locally just clone the repo into the directory of your choosing
+`git clone http://github.com/patsul12/WordPuzzle.git`
 
+then run
 `bundle install`
+
+####Author: Patrick Sullivan
