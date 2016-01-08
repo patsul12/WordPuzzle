@@ -4,7 +4,7 @@ $(function() {
     var guess = $("#user_guess").val()
     $(".result").empty()
     $(".result").attr('hidden', false)
-    if ($(".answer").text() === guess) {
+    if ($(".answer").text().toLowerCase() === guess.toLowerCase()) {
       $(".result").removeClass('winner loser');
       $(".result").addClass("winner");
       $(".result").append("Correct!");

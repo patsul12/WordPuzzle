@@ -18,12 +18,21 @@ describe('the devoweler path') do
     expect(page).to have_content('W-rd P-zzl-')
   end
 
-  it('will get a response if the word is guessed correctly', {:type => :feature}) do
+  it('will get a Correct! if the word is guessed correctly', {:type => :feature}) do
     visit('/')
     fill_in('input', :with => 'Word Puzzle')
     click_button('Submit')
-    fill_in('user_guess', :with => 'Word Puzzle')
+    fill_in('user_guess', :with => 'word Puzzle')
     click_button('Submit')
     expect(page).to have_content('Correct!')
+  end
+
+  it('will get a Try Again! if the word is guessed correctly', {:type => :feature}) do
+    visit('/')
+    fill_in('input', :with => 'Word Puzzle')
+    click_button('Submit')
+    fill_in('user_guess', :with => 'wrong')
+    click_button('Submit')
+    expect(page).to have_content('Try Again!')
   end
 end
