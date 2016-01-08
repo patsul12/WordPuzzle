@@ -35,4 +35,27 @@ describe('the devoweler path') do
     click_button('Submit')
     expect(page).to have_content('Try Again!')
   end
+
+  it('will handle multiple attempts correctly', {:type => :feature}) do
+    visit('/')
+    fill_in('input', :with => 'Word Puzzle')
+    click_button('Submit')
+    fill_in('user_guess', :with => 'wrong')
+    click_button('Submit')
+    fill_in('user_guess', :with => 'Word Puzzle')
+    click_button('Submit')
+    expect(page).to have_content('Correct!')
+  end
+
+  it('will allow the user to go back to the homepage an enter a new phrase', {:type => :feature}) do
+    visit('/')
+    fill_in('input', :with => 'Word Puzzle')
+    click_button('Submit')
+    click_button('Try a new puzzle')
+    fill_in('input', :with => 'Word Puzzle')
+    click_button('Submit')
+    fill_in('user_guess', :with => 'Word Puzzle')
+    click_button('Submit')
+    expect(page).to have_content('Correct!')
+  end
 end
