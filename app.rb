@@ -2,15 +2,15 @@ require('sinatra')
 require('sinatra/reloader')
 require('./lib/devoweler.rb')
 
-set :public_folder, 'public'
-
 @title = "Word Puzzle"
 
 get('/') do
+  @page_header = "Welcome to the Word Puzzle App!"
   erb(:index)
 end
 
 get('/puzzle') do
+  @page_header = "Can you solve puzzle?"
   @puzzle = params.fetch('input').devoweler
   erb(:puzzle)
 end
