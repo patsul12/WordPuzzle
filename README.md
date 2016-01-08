@@ -7,6 +7,7 @@ It then uses this "devoweled" string to create a new page on which the user trie
 
 ##Usage:
 To install locally just clone the repo into the directory of your choosing
+
 `git clone http://github.com/patsul12/WordPuzzle.git`
 
 then run
