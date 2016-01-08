@@ -10,7 +10,7 @@ get('/') do
 end
 
 get('/puzzle') do
-  @page_header = "Can you solve puzzle?"
+  @page_header = "Can you solve the puzzle?"
   @answer = params.fetch('input')
   @puzzle = @answer.devoweler
   erb(:puzzle)
