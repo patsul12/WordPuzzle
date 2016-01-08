@@ -1,5 +1,6 @@
 class String
   def devoweler
-    # todo
+    str = self.gsub(/[aeiou]/, '-')
+    return str
   end
 end
