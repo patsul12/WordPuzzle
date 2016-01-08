@@ -4,6 +4,8 @@ require('./lib/devoweler.rb')
 
 set :public_folder, 'public'
 
+@title = "Word Puzzle"
+
 get('/') do
   erb(:index)
 end
