@@ -12,4 +12,7 @@ To install locally just clone the repo into the directory of your choosing
 then run
 `bundle install`
 
+if the tests are not running you may need to install chromedriver
+`brew install chromedriver`
+
 ####Author: Patrick Sullivan
