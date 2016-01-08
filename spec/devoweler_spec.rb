@@ -38,4 +38,8 @@ describe("String#devoweler") do
   it("handles multiple word strings properly") do
     expect("ruby is an underrated language, which isn't very hard to learn".devoweler).to(eq("r-by -s -n -nd-rr-t-d l-ng--g-, wh-ch -sn't v-ry h-rd t- l--rn"))
   end
+
+  it("handles uppercase chars properly") do
+    expect("IT HANDLES UPPER CASE CHARACTERS".devoweler).to(eq("-T H-NDL-S -PP-R C-S- CH-R-CT-RS"))
+  end
 end

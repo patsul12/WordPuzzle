@@ -1,6 +1,5 @@
 class String
   def devoweler
-    str = self.gsub(/[aeiou]/, '-')
-    return str
+    self.gsub(/[aeiou]/i, '-')
   end
 end
