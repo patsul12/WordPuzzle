@@ -27,4 +27,11 @@ describe("String#devoweler") do
   it("does not alter chars that are not vowels") do
     expect("qwrtypsdfghjklzxcvbnm1234567890-=,./;'[]'!@#$%^&*()_{}").to(eq("qwrtypsdfghjklzxcvbnm1234567890-=,./;'[]'!@#$%^&*()_{}"))
   end
+
+  it("handles words with vowels and other chars properly") do
+    expect("welcome".devoweler).to(eq("w-lc-m-"))
+    expect("hello".devoweler).to(eq("h-ll-"))
+    expect("interesting".devoweler).to(eq("-nt-r-st-ng"))
+    expect("underrated".devoweler).to(eq("-nd-rr-t-d"))
+  end
 end
